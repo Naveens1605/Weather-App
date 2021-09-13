@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello Weather fragment</string>
+    <string name="registration">Registration</string>
+    <string name="mobile">Mobile*</string>
+    <string name="full_name">Full Name*</string>
+    <string name="gender">Gender*</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="dob">DOB*</string>
+    <string name="address_1">Address 1*</string>
+    <string name="address_2">Address 2</string>
+    <string name="pin_code">Pin Code*</string>
+    <string name="check">Check</string>
+    <string name="district">District:</string>
+    <string name="state">State:</string>
+    <string name="register">Register</string>
+    <string name="_999999999">999999999</string>
+    <string name="weather">Weather</string>
+    <string name="temperature_in_centigrade">Temperature in Centigrade:</string>
+    <string name="show_results">Show Results</string>
+    <string name="city">City name</string>
+    <string name="latitude">Latitude: </string>
+    <string name="longitude">Longitude: </string>
+    <string name="temperature_in_fahrenheit">Temperature in Fahrenheit:</string>
+</resources>
