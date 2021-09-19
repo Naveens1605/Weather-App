@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.weatherapp.MainActivity
 import com.example.weatherapp.R
 import com.example.weatherapp.databinding.FragmentWeatherBinding
 import com.example.weatherapp.interfaces.WeatherFetch
@@ -18,11 +19,12 @@ import com.example.weatherapp.viewmodel.WeatherViewModel
 
 class WeatherFragment : Fragment() {
     private lateinit var binding: FragmentWeatherBinding
-    private lateinit var viewModel: WeatherViewModel
+    private lateinit var weatherViewModel: WeatherViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(requireActivity()).get(WeatherViewModel::class.java)
+        weatherViewModel = ViewModelProvider(requireActivity()).get(WeatherViewModel::class.java)
+        (activity as MainActivity).setActionBarTitle(resources.getString(R.string.weather_today))
     }
 
     override fun onCreateView(
@@ -36,21 +38,22 @@ class WeatherFragment : Fragment() {
     }
 
     private fun setListener() {
-        binding.results.setOnClickListener{
-            binding.progressCircular.visibility = View.VISIBLE
-            if(TextUtils.isEmpty(binding.city.text)){
-                Toast.makeText(Variables.context,"Please Enter City", Toast.LENGTH_LONG).show()
-                binding.progressCircular.visibility = View.GONE
-            }
-            else{
-                val city = binding.city.text.toString().replace(" ","%20")
-                val url = String.format(URL.WEATHER.toString(),city)
-                viewModel.getWeather(url,object : WeatherFetch {
-                    override fun onFetched() {
-                        binding.viewModel = viewModel
-                        binding.progressCircular.visibility = View.GONE
-                    }
-                })
+        binding.run {
+            showResultBtn.setOnClickListener {
+                progressCircular.visibility = View.VISIBLE
+                if (TextUtils.isEmpty(cityName.text)) {
+                    Toast.makeText(Variables.context, "Please Enter City", Toast.LENGTH_LONG).show()
+                    progressCircular.visibility = View.GONE
+                } else {
+                    val city = cityName.text.toString().replace(" ", "%20")
+                    val url = String.format(URL.WEATHER.toString(), city)
+                    weatherViewModel.getWeather(url, object : WeatherFetch {
+                        override fun onFetched() {
+                            viewModel = weatherViewModel
+                            progressCircular.visibility = View.GONE
+                        }
+                    })
+                }
             }
         }
     }

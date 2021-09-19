@@ -3,9 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Naveen/Documents/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/gender_menu.xml" value="0.2703125" />
+        <entry key="..\:/Users/Naveen/Documents/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/ic_calendar.xml" value="0.2703125" />
+        <entry key="..\:/Users/Naveen/Documents/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/ic_register_button.xml" value="0.2703125" />
+        <entry key="..\:/Users/Naveen/Documents/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/register_button.xml" value="0.2703125" />
         <entry key="..\:/Users/Naveen/Documents/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/activity_main.xml" value="0.2296875" />
         <entry key="..\:/Users/Naveen/Documents/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_registration.xml" value="0.2379182156133829" />
-        <entry key="..\:/Users/Naveen/Documents/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_weather.xml" value="0.1" />
+        <entry key="..\:/Users/Naveen/Documents/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_weather.xml" value="0.264" />
+        <entry key="..\:/Users/Naveen/Documents/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/gender_menu.xml" value="0.21195652173913043" />
+        <entry key="..\:/Users/Naveen/Documents/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/list_item.xml" value="0.21195652173913043" />
       </map>
     </option>
   </component>
